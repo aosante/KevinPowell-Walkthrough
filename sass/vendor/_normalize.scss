@@ -9,7 +9,7 @@
  */
 
  html {
-     font-family: 'Roboto', sans-serif;
+     @include font($font-normal);
      font-weight: 400;
     line-height: 1.6; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
