@@ -1,0 +1,71 @@
+.main-nav
+    background: $accent
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    height: 0px
+    font-size: 1.3em
+    clip-path: circle(0px at top right);
+    transition: clip-path ease-in-out 450ms
+     
+
+    ul
+        display: flex
+        flex-direction: column
+        text-align: center
+        height: 100vh
+        justify-content: space-around
+
+    li
+        flex: 1 1 auto
+        border: 1px solid rgba(0, 0, 0, .15)
+        display: flex
+        
+
+    a
+        color: $text-inverse
+        text-decoration: none
+        display: flex
+        flex-basis: 100%
+        align-items: center
+        justify-content: center
+
+        &:hover
+                background: rgba(0, 0, 0, .1)
+    &.is-open
+        height: auto
+        clip-path: circle(150% at top right);
+  
+//Menú hamburguesa
+.nav-toggle
+    display: block
+    padding: 1.2em
+    position: absolute
+    right: 1em
+    top: 1em
+    cursor: pointer
+
+
+.hamburger, .hamburger:before, .hamburger:after
+    content: ''
+    display: block
+    width: 1.8em
+    height: 3px
+    background: $white
+    transition: all ease-in-out 360ms
+
+.hamburger:before
+    transform: translateY(-6px)
+
+.hamburger:after
+    transform: translateY(3px)
+
+.open .hamburger
+    transform: rotate(45deg)
+
+.open .hamburger:before
+    display: none
+
+.open .hamburger:after
+    transform:  rotate(-90deg)

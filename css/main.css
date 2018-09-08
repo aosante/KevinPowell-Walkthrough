@@ -310,11 +310,25 @@ template {
   box-sizing: border-box; }
 
 body {
-  color: #048ca8; }
+  color: #048ca8;
+  text-align: center; }
 
 img {
   max-width: 100%;
   height: auto; }
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.unstyled-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.lg-screen {
+  display: none; }
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0 0 .75em; }
@@ -346,17 +360,15 @@ h2 {
 
 .main-header {
   position: absolute;
-  top: 1em;
+  top: 0;
   right: 0;
-  left: 0; }
+  left: 0;
+  padding-top: 1em; }
 
 .logo {
   width: 25%;
   min-width: 10rem;
   max-width: 15rem; }
-
-.main-nav {
-  display: none; }
 
 .hero {
   background: -webkit-gradient(linear, left top, right top, from(#048ca8), to(#16db93));
@@ -368,18 +380,149 @@ h2 {
   padding-bottom: 8em;
   text-align: center; }
 
-.hero-img {
-  display: none; }
-
-.container {
-  width: 95%;
-  max-width: 1200px;
-  margin: 0 auto; }
-
 .grid {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.col {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%; }
+
+.col--full {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%; }
+
+.main-nav {
+  background: #d31869;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 0px;
+  font-size: 1.3em;
+  -webkit-clip-path: circle(0px at top right);
+  clip-path: circle(0px at top right);
+  -webkit-transition: -webkit-clip-path ease-in-out 450ms;
+  transition: -webkit-clip-path ease-in-out 450ms;
+  -o-transition: clip-path ease-in-out 450ms;
+  transition: clip-path ease-in-out 450ms;
+  transition: clip-path ease-in-out 450ms, -webkit-clip-path ease-in-out 450ms; }
+  .main-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  .main-nav li {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .main-nav a {
+    color: white;
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .main-nav a:hover {
+      background: rgba(0, 0, 0, 0.1); }
+  .main-nav.is-open {
+    height: auto;
+    -webkit-clip-path: circle(150% at top right);
+    clip-path: circle(150% at top right); }
+
+.nav-toggle {
+  display: block;
+  padding: 1.2em;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  cursor: pointer; }
+
+.hamburger, .hamburger:before, .hamburger:after {
+  content: '';
+  display: block;
+  width: 1.8em;
+  height: 3px;
+  background: white;
+  -webkit-transition: all ease-in-out 360ms;
+  -o-transition: all ease-in-out 360ms;
+  transition: all ease-in-out 360ms; }
+
+.hamburger:before {
+  -webkit-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  transform: translateY(-6px); }
+
+.hamburger:after {
+  -webkit-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  transform: translateY(3px); }
+
+.open .hamburger {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.open .hamburger:before {
+  display: none; }
+
+.open .hamburger:after {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg); }
+
+.title-box {
+  background: #d31869;
+  color: white;
+  padding: 2em;
+  margin: 0 auto;
+  -webkit-transform: translateY(30%);
+  -ms-transform: translateY(30%);
+  transform: translateY(30%);
+  max-width: 90%; }
+  .title-box h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.15;
+    text-transform: uppercase;
+    letter-spacing: 3px; }
+
+.bg-primary {
+  background: #048ca8;
+  color: white;
+  padding: 7em 2.5em; }
+
+.sales-points {
+  padding: 10vh 0 0; }
+  .sales-points .sales-point {
+    margin-bottom: 2.4em; }
+    .sales-points .sales-point:first-of-type {
+      margin-top: 1.5em; }
+    .sales-points .sales-point:last-child {
+      margin-bottom: 0; }
 
 .btn {
   display: inline-block;
