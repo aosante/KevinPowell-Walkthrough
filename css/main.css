@@ -615,7 +615,8 @@ h2 {
   padding-bottom: 7.5em; }
 
 .promo .lg-screen {
-  background: url(../img/phone-in-hand.jpg); }
+  background: url(../img/phone-in-hand.jpg);
+  background-position: center; }
 
 .sales-points {
   padding: 10vh 0 0; }
@@ -642,7 +643,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url(../../img/logo.svg);
+    background-image: url(../img/logo.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -699,7 +700,7 @@ a {
 
 .cta {
   background-color: #16db93;
-  background-image: url(../../img/call-to-action-background.jpg);
+  background-image: url(../img/call-to-action-background.jpg);
   background-size: cover;
   background-position: center;
   padding: 5em 0;
