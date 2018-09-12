@@ -8,6 +8,16 @@
     font-size: 1.3em
     clip-path: circle(0px at top right);
     transition: clip-path ease-in-out 450ms
+    @media(min-width: 725px)
+        position: relative
+        flex: auto
+        height: auto
+        clip-path: circle(150% at top right);
+        background: none
+        margin-top: 1em
+        margin-left: 2em
+        margin-right: -2em
+        
      
 
     ul
@@ -16,11 +26,18 @@
         text-align: center
         height: 100vh
         justify-content: space-around
+        @media(min-width: 725px)
+            flex-direction: row
+            height: auto
 
     li
         flex: 1 1 auto
         border: 1px solid rgba(0, 0, 0, .15)
         display: flex
+        @media(min-width: 725px)
+            border: none
+            display: inline-block
+            text-align: right
         
 
     a
@@ -30,9 +47,18 @@
         flex-basis: 100%
         align-items: center
         justify-content: center
+        @media(min-width: 725px)
+            justify-content: flex-end
+            font-weight: $font-normal
+            display: inline
 
         &:hover
                 background: rgba(0, 0, 0, .1)
+                @media(min-width: 725px)
+                    background: none
+                    color: darken($accent, 26%)
+                    font-weight: $font-bold
+
     &.is-open
         height: auto
         clip-path: circle(150% at top right);
@@ -45,6 +71,8 @@
     right: 1em
     top: 1em
     cursor: pointer
+    @media(min-width: 725px)
+        display: none
 
 
 .hamburger, .hamburger:before, .hamburger:after
