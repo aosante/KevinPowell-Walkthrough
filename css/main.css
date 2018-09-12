@@ -615,10 +615,7 @@ h2 {
   padding-bottom: 7.5em; }
 
 .promo .lg-screen {
-  background-image: url(../../img/x.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; }
+  background: url(../img/phone-in-hand.jpg); }
 
 .sales-points {
   padding: 10vh 0 0; }
